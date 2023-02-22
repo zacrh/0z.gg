@@ -1,0 +1,325 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<div class="card-grid">
+			<div class="card-hello">
+				<div class="card-hello-header">
+					<div class="card-hello-header-left">
+						<img class="card-hello-header-left-image" src="https://avatars.githubusercontent.com/u/70297870?v=4" alt="Zac" />
+						<div class="card-hello-header-left-text">
+							<h3 class="card-hello-header-left-text-head">Hey, I'm <span class="text-gradient">Zac</span></h3>
+							<p class="card-hello-header-left-text-sub">Full Stack Developer</p>
+						</div>
+					</div>
+					<div class="card-hello-header-right">
+						<a class="card-hello-header-right-social github" href="https://github.com/zacrh" target="_blank" rel="noopener noreferrer">
+							<!-- <a class="card-hello-header-right-social-link" href="https://github.com/zacrh" target="_blank" rel="noopener noreferrer"> -->
+								<!-- <svg class="card-hello-header-right-social-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> -->
+								<svg class="card-hello-header-right-social-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><g data-name="Layer 2"><rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"/><path d="M12 1A10.89 10.89 0 0 0 1 11.77 10.79 10.79 0 0 0 8.52 22c.55.1.75-.23.75-.52v-1.83c-3.06.65-3.71-1.44-3.71-1.44a2.86 2.86 0 0 0-1.22-1.58c-1-.66.08-.65.08-.65a2.31 2.31 0 0 1 1.68 1.11 2.37 2.37 0 0 0 3.2.89 2.33 2.33 0 0 1 .7-1.44c-2.44-.27-5-1.19-5-5.32a4.15 4.15 0 0 1 1.11-2.91 3.78 3.78 0 0 1 .11-2.84s.93-.29 3 1.1a10.68 10.68 0 0 1 5.5 0c2.1-1.39 3-1.1 3-1.1a3.78 3.78 0 0 1 .11 2.84A4.15 4.15 0 0 1 19 11.2c0 4.14-2.58 5.05-5 5.32a2.5 2.5 0 0 1 .75 2v2.95c0 .35.2.63.75.52A10.8 10.8 0 0 0 23 11.77 10.89 10.89 0 0 0 12 1" data-name="github"/></g></svg>
+							<!-- </a> -->
+						</a>
+						<a class="card-hello-header-right-social linkedin" href="https://linkedin.com/in/zachary-rosca-halmagean" target="_blank" rel="noopener noreferrer">
+							<!-- <a class="card-hello-header-right-social-link" href="https://github.com/zacrh" target="_blank" rel="noopener noreferrer"> -->
+								<!-- <svg class="card-hello-header-right-social-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> -->
+								<svg class="card-hello-header-right-social-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><g data-name="Layer 2"><g data-name="linkedin"><rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"/><path d="M15.15 8.4a5.83 5.83 0 0 0-5.85 5.82v5.88a.9.9 0 0 0 .9.9h2.1a.9.9 0 0 0 .9-.9v-5.88a1.94 1.94 0 0 1 2.15-1.93 2 2 0 0 1 1.75 2v5.81a.9.9 0 0 0 .9.9h2.1a.9.9 0 0 0 .9-.9v-5.88a5.83 5.83 0 0 0-5.85-5.82z"/><rect x="3" y="9.3" width="4.5" height="11.7" rx=".9" ry=".9"/><circle cx="5.25" cy="5.25" r="2.25"/></g></g></svg>
+							<!-- </a> -->
+						</a>
+					</div>
+				</div>
+				<h1 class="card-hello-title">Infrastructure & Data <span class="text-gradient">Enthusiast</span></h1>
+				<!-- <h1 class="card-hello-title">Passionate About <span class="text-gradient">Infrastructure</span></h1> -->
+				<p class="card-hello-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="card-location">
+				<img class="card-location-img" src="https://avatars.githubusercontent.com/u/70297870?v=4" alt="Picture of me on a map of my general location" />
+				<p class="card-location-text">📍 Houston, TX</p>
+			</div>
+		</div>
+		
+		<!-- <p class="instructions">
+			<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+			To get started, open the directory <code>src/pages</code> in your project.<br />
+			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+		</p> -->
+	</main>
+	<!-- <main>
+		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<p class="instructions">
+			To get started, open the directory <code>src/pages</code> in your project.<br />
+			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://docs.astro.build/"
+				title="Documentation"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+			<Card
+				href="https://astro.build/integrations/"
+				title="Integrations"
+				body="Supercharge your project with new frameworks and libraries."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="Themes"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/chat/"
+				title="Community"
+				body="Come say hi to our amazing Discord community. ❤️"
+			/>
+		</ul>
+	</main> -->
+</Layout>
+
+<style>
+	html {
+		background-size: 90px 90px;
+		background-image: linear-gradient(90deg,rgba(38,38,38,.5) 1px,transparent 0),linear-gradient(180deg,rgba(38,38,38,.5) 1px,transparent 0);
+		--tw-bg-opacity: 1;
+		background-color: rgb(23 23 23/var(--tw-bg-opacity));
+		--tw-text-opacity: 1;
+		color: rgb(245 245 245/var(--tw-text-opacity));
+		/* background: linear-gradient(180deg,#09050f 0%,#0f0705 100%); */
+	}
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 70rem;
+		color: #fff;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.card-grid {
+		/* display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0; */
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(12,1fr);
+	}
+	.card-hello {
+		background: #131311;
+		background-size: cover;
+    	padding: 51px 58px;
+		border-radius: 25px 50px 5px;
+		grid-column: 1/9;
+	}
+	.card-hello:before {
+		background: linear-gradient(18.48deg,rgba(255,255,255,.25) 2.76%,rgba(255,255,255,0) 17.23%),linear-gradient(200.6deg,rgba(255,255,255,.25) 4.13%,rgba(255,255,255,0) 20.54%);
+		border-radius: inherit;
+		content: "";
+		inset: 0;
+		-webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+		mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+		mask-composite: xor;
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+		padding: 1px;
+		pointer-events: none;
+		position: absolute;
+	}
+	.card-grid>* {
+		isolation: isolate;
+		overflow: hidden;
+		position: relative;
+	}
+	.card-hello-header {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 2rem;
+		position: relative;
+	}
+	.card-hello-header-left {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+	}
+	.card-hello-header-left-image {
+		height: 48px;
+		width: 48px;
+		margin-right: 1.5rem; /* 1.25rem */
+		border-radius: 50%;
+		/* border: rgb(var(--accent)) 1px solid; */
+	}
+	.card-hello-header-left-text {
+		display: flex;
+		flex-direction: column;
+	}
+	.card-hello-header-left-text-head {
+		margin: 0;
+		margin-block: 0;
+		margin-inline: 0;
+		margin-bottom: 2px;
+		font-weight: 400;
+	}
+	.card-hello-header-left-text-sub {
+		margin: 0;
+		margin-block: 0;
+		margin-inline: 0;
+		opacity: .32;
+	}
+	.card-hello-header-right {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+	}
+	.card-hello-header-right-social {
+		align-items: center;
+		background: rgba(255,255,255,.02);
+		border-radius: 6px;
+		color: #fff;
+		display: flex;
+		height: 40px;
+		justify-content: center;
+		position: relative;
+		transition: .45s cubic-bezier(.6,.6,0,1) background-color,.45s cubic-bezier(.6,.6,0,1) transform;
+		width: 40px;
+		margin-right: .65rem;
+	}
+	.card-hello-header-right-social:before {
+		background: linear-gradient(180deg,rgba(255,255,255,.04) 0%,rgba(255,255,255,0) 100%);
+		border-radius: inherit;
+		content: "";
+		inset: 0;
+		-webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+		mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+		mask-composite: xor;
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+		padding: 1px;
+		pointer-events: none;
+		position: absolute;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.card-hello-header-right-social:hover {
+		background: rgba(255,255,255,.04);
+		transform: scale(1.1);
+	}
+	.card-hello-header-right-social-link {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.card-hello-header-right-social-icon {
+		color: #fff;
+	}
+	.card-hello-title {
+		font-weight: 400;
+	}
+	.card-hello-desc {
+		max-width: 70%;
+		opacity: 0.6;
+	}
+	.card-location {
+		/* background: #131311;
+		background-size: cover;
+		grid-column: 5/13;
+		border-radius: 50px 25px 50px 5px; */
+		background-image: url("/src/Houston.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+    	border-radius: 50px 25px 50px 5px;
+    	grid-column: 9/13;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.card-location-img {
+		height: 68px;
+		width: 68px;
+		border-radius: 50%;
+		border: rgb(var(--accent)) 2px solid;
+		position: relative;
+		display: inline-block
+	}
+	.card-location-img:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: -5px;
+		top: -5px;
+		width: 92px;
+		height: 92px;
+		z-index: 99;
+		border-radius: 50%;
+		animation: pulse 1.5s infinite ease-in;
+	}
+	@keyframes pulse {
+		from {
+			transform: scale(0.5);
+			opacity: 1;
+		}
+
+		to {
+			transform: scale(1.5);
+			opacity: 0;
+		}
+		}
+	.card-location-text {
+		background-color: rgba(19, 19, 17, .8);
+		background-color: rgb(255, 255, 255, .1);
+		/* background-color: #fff; */
+		border-radius: 24px;
+		width: fit-content;
+		padding: 5px 12px 5px 10px;
+		font-size: 0.9rem;
+		/* font-weight: 500; */
+		/* display: flex;
+		align-items: center;
+		justify-content: center; */
+		position: absolute;
+		bottom: 11px;
+		left: 50%;
+		transform: translateX(-50%);
+		backdrop-filter: blur(3px);
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
