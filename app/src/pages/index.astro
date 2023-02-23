@@ -5,8 +5,14 @@ import Card from '../components/Card.astro';
 
 <Layout title="Welcome to Astro.">
 	<main>
+		<div class="header">
+			<div class="header-left">
+				<p class="header-left-title">Zac<span class="header-left-role">, 0z.gg</span></p>
+			</div>
+		</div>
 		<div class="card-grid">
 			<div class="card-hello">
+				<img src="/public/assets/images/home-background-shortish.png" alt="Hello" class="card-hello-background" />
 				<div class="card-hello-header">
 					<div class="card-hello-header-left">
 						<img class="card-hello-header-left-image" src="https://avatars.githubusercontent.com/u/70297870?v=4" alt="Zac" />
@@ -35,6 +41,7 @@ import Card from '../components/Card.astro';
 				<p class="card-hello-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 			<div class="card-location">
+				<div class="card-status" />
 				<img class="card-location-img" src="https://avatars.githubusercontent.com/u/70297870?v=4" alt="Picture of me on a map of my general location" />
 				<p class="card-location-text">📍 Houston, TX</p>
 			</div>
@@ -80,9 +87,10 @@ import Card from '../components/Card.astro';
 <style>
 	html {
 		background-size: 90px 90px;
-		background-image: linear-gradient(90deg,rgba(38,38,38,.5) 1px,transparent 0),linear-gradient(180deg,rgba(38,38,38,.5) 1px,transparent 0);
+		background-image: linear-gradient(90deg,rgba(38,38,38,.3) 1px,transparent 0),linear-gradient(180deg,rgba(38,38,38,.3) 1px,transparent 0);
 		--tw-bg-opacity: 1;
 		background-color: rgb(23 23 23/var(--tw-bg-opacity));
+		background-color: #09050f;
 		--tw-text-opacity: 1;
 		color: rgb(245 245 245/var(--tw-text-opacity));
 		/* background: linear-gradient(180deg,#09050f 0%,#0f0705 100%); */
@@ -104,6 +112,19 @@ import Card from '../components/Card.astro';
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
+	}
+	.header {
+		align-items: center;
+		display: flex;
+		font-size: 1.33rem;
+		justify-content: space-between;
+		padding: 16px 0 26px;
+	}
+	.header-left {
+		display: flex;
+	}
+	.header-left-role {
+		opacity: .25;
 	}
 	.card-grid {
 		/* display: grid;
@@ -147,6 +168,7 @@ import Card from '../components/Card.astro';
 		justify-content: space-between;
 		margin-bottom: 2rem;
 		position: relative;
+		z-index: 2;
 	}
 	.card-hello-header-left {
 		display: flex;
@@ -228,17 +250,21 @@ import Card from '../components/Card.astro';
 	}
 	.card-hello-title {
 		font-weight: 400;
+		position: relative;
+		z-index: 2;
 	}
 	.card-hello-desc {
 		max-width: 70%;
 		opacity: 0.6;
+		position: relative;
+		z-index: 2;
 	}
 	.card-location {
 		/* background: #131311;
 		background-size: cover;
 		grid-column: 5/13;
 		border-radius: 50px 25px 50px 5px; */
-		background-image: url("/src/Houston.png");
+		background-image: url("/public/assets/images/Houston.png");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 100%;
@@ -247,6 +273,43 @@ import Card from '../components/Card.astro';
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		transition-duration: .5s;
+	}
+	.card-location::before {
+		background: linear-gradient(112.59deg,rgba(255,255,255,0) 83.32%,rgba(255,255,255,.1) 94.31%),linear-gradient(109.73deg,rgba(255,255,255,.1) 7.85%,rgba(255,255,255,0) 19.46%);
+		border-radius: inherit;
+		content: "";
+		inset: 0;
+		-webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+		mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+		mask-composite: xor;
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+		padding: 1px;
+		pointer-events: none;
+		position: absolute;
+	}
+	.card-hello-background {
+		animation: rotateCardHelloBackground 100s linear infinite;
+		height: 1010px;
+		left: 50%;
+		pointer-events: none;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		width: 1010px;
+		z-index: 0;
+	}
+	@keyframes rotateCardHelloBackground {
+		from {
+			transform: translate(-50%,-50%) rotate(0deg);
+		}
+		to {
+			transform: translate(-50%,-50%) rotate(360deg);
+		}
+	}
+	.card-location:hover > .card-location-img {
+		transform: scale(1.1) rotate(5deg);
 	}
 	.card-location-img {
 		height: 68px;
@@ -254,19 +317,25 @@ import Card from '../components/Card.astro';
 		border-radius: 50%;
 		border: rgb(var(--accent)) 2px solid;
 		position: relative;
-		display: inline-block
+		display: inline-block;
+		transition-property: transform;
+		transition-timing-function: cubic-bezier(.4,0,.2,1);
+		transition-duration: .5s;
 	}
-	.card-location-img:before {
-		content: '';
-		display: block;
+	.card-status {
 		position: absolute;
-		left: -5px;
-		top: -5px;
-		width: 92px;
-		height: 92px;
-		z-index: 99;
+	}
+	.card-status:before {
+		content: '';
+		position: absolute;
+		left: calc(4.75rem / -2);
+		top: calc(4.75rem / -2);
+		width: 4.75rem;
+		height: 4.75rem;
 		border-radius: 50%;
-		animation: pulse 1.5s infinite ease-in;
+		background: rgb(132 204 22/ 1);
+		/* background: #72ff7d; */
+		animation: pulse 1s cubic-bezier(0,0,.2,1) infinite;
 	}
 	@keyframes pulse {
 		from {
@@ -295,7 +364,7 @@ import Card from '../components/Card.astro';
 		bottom: 11px;
 		left: 50%;
 		transform: translateX(-50%);
-		backdrop-filter: blur(3px);
+		backdrop-filter: blur(2px); /* 3px */
 	}
 	.instructions {
 		line-height: 1.6;
