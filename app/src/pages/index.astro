@@ -45,6 +45,20 @@ import Card from '../components/Card.astro';
 				<img class="card-location-img" src="https://avatars.githubusercontent.com/u/70297870?v=4" alt="Picture of me on a map of my general location" />
 				<p class="card-location-text">📍 Houston, TX</p>
 			</div>
+			<div class="card-currently">
+				<h1 class="card-currently-title">Currently, I'm working on <br /><span class="card-currently-title-emphasis">Veer</span></h1>
+				<p class="card-currently-desc">Leveraging <span class="card-currently-desc-emphasis">esports</span> to build perfomant & scalable applications used by {/* empowering/and empower (instead of 'used by') */} <span class="card-currently-desc-emphasis">hundreds of thousands of gamers</span>.</p>
+				<img class="card-currently-background lazy-image" height="1" width="1" src="/public/assets/images/currently-card-background.png" alt="Glare over the card explaining what I'm currently working on" />
+				<div class="card-currently-shapes">
+					<div class="card-currently-shape shape-1">
+						<img height="1" width="1" class="card-currently-shape-img tp" src="https://i.imgur.com/L444V1h.png" alt="Twitch Payouts Logo" />
+					</div>
+					<div class="card-currently-shape shape-2">
+						<svg class="card-currently-shape-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.37 189.2" ><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#fff;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M15.71,125.15c-1.33-9.63-2.68-19.13-4-28.64C7.9,67.84,4.11,39.16.21,10.49-.77,3.31,1.65.25,9,.15Q17.76,0,26.49.15c6.94.1,11.36,4,12.06,10.73Q43.05,54,47.39,97.25c.13,1.27.3,3-.38,3.81-8,9.89-16.18,19.51-28.81,23.74A13.54,13.54,0,0,1,15.71,125.15Z"/><path class="cls-1" d="M82.32,128.26c-1.45,11-2.75,21.2-4.11,31.35-.82,6.1-1.59,12.22-2.61,18.29-1.28,7.64-5.61,11.21-13.41,11.26q-13,.08-26,0c-7.92-.06-12.53-4.35-13.57-12.27-1.4-10.68-2.88-21.36-4.38-32.42C41.59,146.7,62.48,141.21,82.32,128.26Z"/><path class="cls-2" d="M55.28,88.71c1.27-12.88,2.51-25.76,3.8-38.64,1.2-11.93,2.58-23.85,3.61-35.8C63.44,5.56,66.5-.82,77.74.09c4,.32,8-.06,12,.11,6.47.28,9.31,3.73,8.49,10.17a15.08,15.08,0,0,1-1.14,4.31C85.33,40.45,72.22,65.46,55.28,88.71Z"/></g></g></svg>
+					</div>
+					<div class="card-currently-shape shape-3" />
+				</div>
+			</div>
 		</div>
 		
 		<!-- <p class="instructions">
@@ -365,6 +379,198 @@ import Card from '../components/Card.astro';
 		left: 50%;
 		transform: translateX(-50%);
 		backdrop-filter: blur(2px); /* 3px */
+	}
+	.card-currently {
+		background: linear-gradient(129.93deg,#ff4650 0%,#f06e62 100%);
+		height: 434px;
+		padding: 57px 0 57px 54px;
+		border-radius: 50px 5px 5px 25px;
+    	grid-column: 1/6;
+	}
+	.card-currently-title {
+		font-weight: 400;
+		color: #ffffffb3;
+	}
+	.card-currently-title-emphasis, .card-currently-desc-emphasis {
+		color: #ffffff;
+	}
+	.card-currently-desc {
+		max-width: 70%;
+		color: #ffffffb3;
+		position: relative;
+		z-index: 2;
+	}
+
+	.lazy-image {
+		display: block;
+    	transition: 1s cubic-bezier(.6,.6,0,1) opacity;
+	}
+	.card-currently-background {
+		/* animation: rotateCardCurrentlyBackground 100s linear infinite;
+		height: 1010px;
+		left: 50%;
+		pointer-events: none;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		width: 1010px;
+		z-index: 0; */
+		height: auto;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+	.card-currently-shapes {
+		height: 415.26px;
+		left: 163px;
+		pointer-events: none;
+		position: absolute;
+		top: 340px;
+		width: 465.26px;
+	}
+	.card-currently-shape {
+		-webkit-backdrop-filter: blur(6px);
+		backdrop-filter: blur(6px);
+		background-image: linear-gradient(225deg,rgba(255,255,255,.6) 7.37%,rgba(255,255,255,0) 95.08%);
+		border: 1px solid rgba(255,255,255,.5);
+		border-radius: 40px;
+		position: absolute;
+		transform: rotate(-45deg);
+		/* box-shadow: 0 0 30px 20px rgba(255,255,255,.1); */
+		transition: .45s cubic-bezier(.6,.6,0,1) transform;
+		overflow: visible;
+	}
+	.card-currently-shape.shape-1 {
+		height: 124px;
+		left: 120px;
+		top: -40px;
+		width: 124px;
+		z-index: 1;
+	}
+	.card-currently-shape.shape-2 {
+		height: 144px;
+		left: 0;
+		top: 0px;
+		width: 144px;
+		z-index: 1;
+		background-image: none;
+		transition: .45s cubic-bezier(.6,.6,0,1) background-image,.45s cubic-bezier(.6,.6,0,1) transform;
+	}
+	.card-currently-shape.shape-3 {
+		height: 288px;
+		left: 72px;
+		top: 0;
+		width: 288px;
+		z-index: 0;
+		/* transition: .45s cubic-bezier(.6,.6,0,1) transform; */
+		animation: shiftInCardCurrentlyShape3 .45s cubic-bezier(.6,.6,0,1) alternate;
+	}
+	.card-currently:hover > .card-currently-shapes > .card-currently-shape.shape-3 {
+		/* transform: translate(25px, 25px) rotate(-45deg) !important; */
+		animation: shiftOutCardCurrentlyShape3 .45s cubic-bezier(.6,.6,0,1) alternate;
+		left: 97px;
+		top: 25px;
+	}
+	.card-currently-shape.shape-2 {
+		overflow: hidden;
+		display: block;
+		position: relative;
+	}
+	.card-currently-shape.shape-2:before {
+		border-radius: inherit;
+		display: block;
+		width: 110%;
+		height: 110%;
+		content: '';
+			position: absolute;
+			top: 0; 
+			left: 0;
+		background: linear-gradient(225deg,rgba(255,255,255,.9) 7.37%,rgba(255,255,255,0) 95.08%);
+		/* background: linear-gradient(135deg, #21d4fd 25%, #b721ff 75%);	 */
+		transition: .45s cubic-bezier(.6,.6,0,1) opacity;
+		/* transition: all 0.5s; */
+		/* transform: rotate(-45deg); */
+		/* backdrop-filter: blur(2px); */
+		-webkit-backdrop-filter: blur(6px);
+		backdrop-filter: blur(6px);
+		z-index: 0;
+		opacity: .6;
+	}
+	.card-currently-shape.shape-2:after {
+		/* border-radius: 9px;
+		display: block;
+		width: 108px;
+		height: 108px;
+		margin: 6px;
+		background: url('https://i.imgur.com/w0BjFgr.png');
+		background-size: cover;
+		content: '';
+		position: absolute;
+		top: 0; left: 0;
+		z-index: 1; */
+		height: 65%;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		position: absolute;
+		margin: auto;
+		width: 65%;
+		transform: rotate(45deg);
+	}
+	.card-currently-shape:hover:before {
+		transform: translate(-25%, -25%) rotate(-180deg);
+
+	}
+	.card-currently:hover > .card-currently-shapes > .card-currently-shape.shape-2 {
+		transform: scale(1.05) rotate(-45deg) !important;
+		/* background-image: linear-gradient(225deg,rgba(255,255,255,.9) 7.37%,rgba(255,255,255,2) 95.08%); */
+		/* background-color: rgba(255, 255, 255, .3); */
+		/* transform: translate(25%, 25%) rotate(-180deg); */
+	}
+	.card-currently:hover > .card-currently-shapes > .card-currently-shape.shape-2:before {
+		/* transform: scale(1.1); */
+		opacity: .8;
+	}
+	@keyframes shiftOutCardCurrentlyShape3 {
+		from {
+			left: 72px;
+			top: 0px;
+		}
+		to {
+			left: 97px;
+			top: 25px;
+		}
+	}
+	@keyframes shiftInCardCurrentlyShape3 {
+		from {
+			left: 97px;
+			top: 25px;
+		}
+		to {
+			left: 72px;
+			top: 0px;
+		}
+	}
+	.card-currently-shape-img {
+		height: 65%;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		position: absolute;
+		margin: auto;
+		width: 65%;
+		transform: rotate(45deg);
+	}
+	.card-currently-shape-img.tp {
+		height: 80%;
+		width: 80%;
 	}
 	.instructions {
 		line-height: 1.6;
