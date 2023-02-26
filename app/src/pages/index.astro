@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import { Tooltips } from 'astro-tooltips';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -39,7 +38,7 @@ import { Tooltips } from 'astro-tooltips';
 				</div>
 				<h1 class="card-hello-title">Infrastructure & Data <span class="text-gradient">Enthusiast</span></h1>
 				<!-- <h1 class="card-hello-title">Passionate About <span class="text-gradient">Infrastructure</span></h1> -->
-				<p class="card-hello-desc">I'm a junior in high school passionate about using technology to create social good through remarkable digital experiences.</p>
+				<p class="card-hello-desc">Junior in high school <span class="card-hello-desc-emphasis">passionate</span> about using <span class="card-hello-desc-emphasis">technology</span> to create <span class="card-hello-desc-emphasis">social good</span> through <span class="card-hello-desc-emphasis">remarkable</span> digital experiences.</p>
 				<!-- <p class="card-hello-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
 			</div>
 			<div class="card-location">
@@ -48,7 +47,7 @@ import { Tooltips } from 'astro-tooltips';
 				<p class="card-location-text">📍 Houston, TX</p>
 			</div>
 			<div class="card-currently">
-				<h1 class="card-currently-title">Currently, I'm working on <br /><span class="card-currently-title-emphasis">Veer</span></h1>
+				<h1 class="card-currently-title">Currently <br class="card-currently-title-break" /> working on <br /><span class="card-currently-title-emphasis">Veer</span></h1>
 				<p class="card-currently-desc">Leveraging <span class="card-currently-desc-emphasis">esports</span> to build perfomant & scalable applications used by {/* empowering/and empower (instead of 'used by') */} <span class="card-currently-desc-emphasis">hundreds of thousands of gamers</span>.</p>
 				<img class="card-currently-background lazy-image" height="1" width="1" src="/public/assets/images/currently-card-background.png" alt="Glare over the card explaining what I'm currently working on" />
 				<div class="card-currently-shapes">
@@ -63,8 +62,8 @@ import { Tooltips } from 'astro-tooltips';
 			</div>
 			<div class="card-technologies">
 				<div class="card-technologies-header">
-					<h1 class="card-technologies-title"><span class="card-technologies-title-emphasis">How</span> I Do It</h1>
-					<p class="card-technologies-desc">By using new <span class="card-technologies-desc-emphasis">bleeding-edge</span> technologies and languages, I { /* can */ } stay at the <span class="card-technologies-desc-emphasis">forefront {/* cutting edge (instead of forefront) */} of development{/* innovation (instead of development (maybe?)) */ }</span>.</p>
+					<h1 class="card-technologies-title"><span class="card-technologies-title-emphasis">How</span> It's Possible</h1>
+					<p class="card-technologies-desc">Using new <span class="card-technologies-desc-emphasis">bleeding-edge</span> technologies and languages to { /* can */ } stay at the <span class="card-technologies-desc-emphasis">forefront {/* cutting edge (instead of forefront) */} of development{/* innovation (instead of development (maybe?)) */ }</span>.</p>
 				</div>
 				<div class="card-technologies-items">
 					<div class="card-technologies-item typescript" title="TypeScript" data-tooltip-theme="sleek">
@@ -140,13 +139,13 @@ import { Tooltips } from 'astro-tooltips';
 				<p class="card-definition-meaning">the <span class="card-definition-meaning-emphasis">first</span> (0) and <span class="card-definition-meaning-emphasis">last</span> (Z) characters of the alphanumericals (0-9 and A-Z), aprapos to a <span class="card-definition-meaning-emphasis">full stack</span> of characters</p>
 					<!-- <li>base of operations for Zachary Rosca-Halmagean</li> -->
 					<!-- <p class="card-definition-meaning">A <span class="card-definition-meaning-emphasis">full stack</span> of characters, including <span class="card-definition-meaning-emphasis">front-end</span>, <span class="card-definition-meaning-emphasis">back-end</span>, and <span class="card-definition-meaning-emphasis">dev-ops</span> development.</p> -->
-				<p class="card-definition-sentence">"zac's skillset covers everything from 0 to Z, so it makes sense that his personal website is https://0z.gg"</p>
+				<p class="card-definition-sentence">"make sure to understand the material inside and out—from 0 to Z"</p>
 				<img class="card-definition-background lazy-image" height="1" width="1" src="/public/assets/images/definition-background-long.png" alt="Background of the card showing the definition of 0z.gg" />
 			</div>
 			<div class="card-talk">
 				<h1 class="card-talk-title">Let's <span class="card-talk-title-emphasis">talk</span></h1>
 				<p class="card-talk-description">Feel free to shoot me a message; I'll get back to the non-spam.</p>
-				<a class="card-talk-email" href="mailto:hi@0z.gg" aria-label="Email me!">
+				<a class="card-talk-email" href="mailto:hey@0z.gg" aria-label="Email me!">
 					<div class="card-talk-email-icon">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path></svg>
 					</div>
@@ -155,6 +154,10 @@ import { Tooltips } from 'astro-tooltips';
 				<!-- <p class="card-talk-description">I'm always looking for new opportunities to work with new people. If you have a project you'd like to discuss, or just want to say hi, feel free to reach out!</p> -->
 			</div>
 		</div>
+		<div class="footer">
+			<h3 class="footer-head">Thanks for stopping by! <span class="footer-emoji" role="img" aria-label="Smiling face with a cowboy hat on">🤠</span></h3>
+			<p class="footer-sub">© <span id="year" /> Zachary Rosca-Halmagean</p>
+		</div>
 		
 		<!-- <p class="instructions">
 			<h1>Welcome to <span class="text-gradient">Astro</span></h1>
@@ -162,35 +165,10 @@ import { Tooltips } from 'astro-tooltips';
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p> -->
 	</main>
-	<!-- <main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main> -->
+	<script>
+		const year = new Date().getFullYear();
+		document.getElementById('year')!.innerHTML = String(year);
+	</script>
 </Layout>
 
 <style>
@@ -210,6 +188,7 @@ import { Tooltips } from 'astro-tooltips';
 		max-width: 67.45rem; /* 70rem normal; 67.45rem (runs along guidelines in background) */
 		color: #fff;
 	}
+	
 	h1 {
 		font-size: 3rem;
 		font-weight: 800;
@@ -234,6 +213,23 @@ import { Tooltips } from 'astro-tooltips';
 	}
 	.header-left-role {
 		opacity: .25;
+	}
+	.footer {
+		margin: 100px 0 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.footer-head {
+		font-size: 1.33rem;
+		font-weight: 400;
+		margin: 0;
+		margin-bottom: .25rem;
+	}
+	.footer-sub {
+		font-size: .875rem;
+		margin: 0;
+		opacity: .4;
 	}
 	.card-grid {
 		/* display: grid;
@@ -364,9 +360,13 @@ import { Tooltips } from 'astro-tooltips';
 	}
 	.card-hello-desc {
 		max-width: 70%;
-		opacity: 0.6;
+		/* opacity: 0.6; */
+		color: #ffffff99;
 		position: relative;
 		z-index: 2;
+	}
+	.card-hello-desc-emphasis {
+		color: #ffffffd0;
 	}
 	.card-location {
 		/* background: #131311;
@@ -499,7 +499,15 @@ import { Tooltips } from 'astro-tooltips';
 
 	.lazy-image {
 		display: block;
-    	transition: 1s cubic-bezier(.6,.6,0,1) opacity;
+    	animation: lazyImageAnimation 1s cubic-bezier(.6,.6,0,1);
+	}
+	@keyframes lazyImageAnimation {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 	.card-currently-background {
 		/* animation: rotateCardCurrentlyBackground 100s linear infinite;
@@ -623,7 +631,7 @@ import { Tooltips } from 'astro-tooltips';
 
 	}
 	.card-currently:hover > .card-currently-shapes > .card-currently-shape.shape-2 {
-		transform: scale(1.03 /* 1.05 */) rotate(-45deg) !important;
+		transform: scale(1.03 /* 1.05 */) rotate(-45deg);
 		/* background-image: linear-gradient(225deg,rgba(255,255,255,.9) 7.37%,rgba(255,255,255,2) 95.08%); */
 		/* background-color: rgba(255, 255, 255, .3); */
 		/* transform: translate(25%, 25%) rotate(-180deg); */
@@ -997,5 +1005,152 @@ import { Tooltips } from 'astro-tooltips';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+	}
+
+	@media screen and (max-width: 67.45rem) {
+		main {
+			padding: 1rem;
+		}
+		.header {
+			/* justify-content: center; */
+		}
+		.card-grid {
+			grid-gap: 1rem;
+			grid-template-columns: 1fr;
+		}
+		.card-grid > * {
+			grid-column: 1/2 !important;
+			border-radius: 15px !important;
+		}
+		.card-hello {
+			padding: 1.5rem;
+		}
+		.card-hello-header {
+			/* align-items: flex-start; */
+			/* flex-direction: column; */
+			margin-bottom: 1rem;
+		}
+		.card-hello-header-right-social:last-child {
+			margin-right: 0;
+		}
+		.card-hello-header-right-social {
+			height: 38px;
+			width: 38px;
+		}
+		.card-hello-header-left {
+			/* margin-bottom: 1rem; */
+		}
+		.card-hello-header-left-image {
+			margin-right: .9rem;
+			height: 45px;
+			width: 45px;
+		}
+		.card-hello-header-left-text-sub {
+			font-size: .905rem;
+		}
+		.card-hello-title {
+			font-size: 2.25rem;
+		}
+		.card-hello-desc {
+			max-width: 100%;
+			line-height: 1.6;
+			font-size: .975rem;
+			margin-bottom: 0;
+		}
+		.card-location {
+			height: 250px;
+		}
+		.card-currently {
+			height: 300px;
+			padding: 22px;
+		}
+		.card-currently-title {
+			font-size: 2.25rem;
+		}
+		.card-currently-title-break {
+			display: none;
+		}
+		.card-currently-desc {
+			font-size: .975rem;
+			margin-bottom: 0;
+			max-width: 73%;
+		}
+		.card-currently-shapes {
+			left: 192px;
+			top: 66px;
+			transform: scale(.8) rotate(-45deg);
+		}
+		.card-currently-shape.shape-1, .card-currently-shape.shape-2 {
+			transform: rotate(0);
+		}
+		.card-currently:hover > .card-currently-shapes > .card-currently-shape.shape-2 {
+			transform: rotate(0) scale(1);
+		}
+		.card-currently-shape.shape-3 {
+			animation: none;
+		}
+		.card-currently:hover > .card-currently-shapes > .card-currently-shape.shape-3 {
+			animation: none;
+			left: 72px;
+			top: 0;
+		}
+		.card-technologies {
+			padding: 22px;
+		}
+		.card-technologies-items {
+
+		}
+		.card-technologies-title {
+			font-size: 1.75rem;
+		}
+		.card-technologies-desc {
+			font-size: .95rem;
+			margin-bottom: 0;
+		}
+		.card-technologies-item {
+			height: 52px;
+			width: 52px;
+		}
+		.card-definition {
+			/* height: 300px; */
+			padding: 22px;
+		}
+		.card-definition-word {
+			font-size: 2.25rem;
+		}
+		.card-definition-info {
+			font-size: .775rem;
+			margin-bottom: 0;
+		}
+		.card-definition-meaning {
+			font-size: .95rem;
+		}
+		.card-definition-sentence {
+			font-size: .95rem;
+		}
+		@keyframes rotateDefinitionCardBackground {
+			0%, 100% {
+				transform: scale(1) translateX(0);
+			}
+			50% {
+				transform: scale(1.3) translateX(0);
+			}
+		}
+		.card-talk {
+			padding: 22px;
+		}
+		.card-talk-title {
+			font-size: 1.75rem;
+			margin-bottom: 0;
+		}
+		.card-talk-description {
+			font-size: .95rem;
+			margin-bottom: 1.25rem;
+		}
+	}
+	@media screen and (max-width: 500px) {
+		.card-currently-title-break {
+			display: block;
+		}
 	}
 </style>
