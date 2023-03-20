@@ -5,6 +5,8 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
+
+import { Tooltips } from 'astro-tooltips';
 ---
 
 <!DOCTYPE html>
@@ -19,6 +21,7 @@ const { title, description } = Astro.props;
 		<link rel="icon" href="/favicon.ico" />
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		<Tooltips interactive={false} arrow={false} placement="top" animation="fade"  />
 	</head>
 	<body>
 		<slot />
